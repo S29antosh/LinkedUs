@@ -1,13 +1,12 @@
 import React from 'react'
+import Landing_page from './Components/Landing_page'
 
 
 
 export default function App() {
   return (
     <div>
-      <h1>linkedUs</h1>
-      <p>On progress....</p>
-      <button>Collaborate</button>
+      <Landing_page />
     </div>
   )
 }
