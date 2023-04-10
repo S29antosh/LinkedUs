@@ -1,28 +1,31 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Login from './Login'
+import React from "react";
+import { Link } from "react-router-dom";
 
-export default function Navigation_Bar() {
+export default function Navigation_Bar(props) {
+  const style = {
+    color: "black",
+  };
   return (
     <div>
       <header>
         <div className="navbar">
           <div className="logo">
-            <h1>linkedUs</h1>
+            <Link style={style} to="/">
+              <h1>linkedUs</h1>
+            </Link>
           </div>
           <div className="nav-links">
             <ul>
               <li>
-                <Link to="/Login">Login</Link>{" "}
+                <Link to="/Login">{ props.name}</Link>{" "}
               </li>
               <li>
-                <a href="./">Contact</a>{" "}
+                <Link to="/Contact">Contact</Link>
               </li>
               <li>
-                <a href="./">About Us</a>{" "}
+                <Link to="/About">About Us</Link>{" "}
               </li>
             </ul>
-
             <svg
               width="42"
               height="35"
@@ -39,5 +42,5 @@ export default function Navigation_Bar() {
         </div>
       </header>
     </div>
-  )
+  );
 }

@@ -1,11 +1,15 @@
 import React from "react";
 import Navigation_Bar from "./Navigation_Bar";
-import { Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
+import AnimatedPage from "../Animation";
 
 export default function Landing_page() {
   return (
+    <AnimatedPage>
     <div className="layout">
-      <Navigation_Bar />
+      <Navigation_Bar
+      name="Login"
+      />
       <main>
         <div className="main-content">
           <div className="left-section">
@@ -16,7 +20,7 @@ export default function Landing_page() {
             </p>
             <div className="button">
               
-              <a href="./Login.jsx"></a><button>Lets Begin</button>
+              <Link to="/Login"><button>Lets Begin</button></Link>
             </div>
           </div>
           <div className="right-section">
@@ -29,5 +33,6 @@ export default function Landing_page() {
         </div>
       </main>
     </div>
+    </AnimatedPage>
   );
 }

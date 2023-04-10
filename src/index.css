@@ -64,6 +64,9 @@ Header {
   font-weight: bold;
   color: var(--primary-color);
 }
+.logo Link{
+  color: var(--primary-color);
+}
 
 .nav-links {
   display: flex;
