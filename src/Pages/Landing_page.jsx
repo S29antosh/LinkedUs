@@ -25,10 +25,11 @@ export default function Landing_page() {
             </div>
             <div className="right-section">
               {/* random image from unsplash */}
-              <img
+              {/* <img
                 src="https://source.unsplash.com/random/400x400"
                 alt="random image"
-              />
+              /> */}
+              <img src="public\Images\Scene - 1.png" alt="img" />
             </div>
           </div>
         </main>
