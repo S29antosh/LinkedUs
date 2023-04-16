@@ -24,7 +24,7 @@ li {
   list-style: none;
 }
 
-a {
+a{
   text-decoration: none;
   color: var(--grey-shade);
 }
@@ -37,16 +37,10 @@ img {
 .layout {
   width: 80%;
   margin: 0px auto;
-
-
+  min-height: 100vh;
 }
-
-
 Header {
-
   padding: 1em;
-
-
 }
 
 .navbar {
@@ -57,14 +51,14 @@ Header {
   align-self: center;
   align-items: center;
 }
-
 .logo {
   font-size: 1.1rem;
   font-family: cursive;
   font-weight: bold;
   color: var(--primary-color);
 }
-.logo Link{
+
+.logo Link {
   color: var(--primary-color);
 }
 
@@ -84,15 +78,12 @@ Header {
 /* main  */
 main {
   height: 80vh;
+  width: 100%;
   margin: 1em;
   margin: auto;
   padding: 1em;
   display: flex;
   justify-content: center;
-
-
-
-
 }
 
 .main-content {
@@ -100,7 +91,7 @@ main {
   align-items: center;
   gap: 1em;
   justify-content: space-between;
-
+  flex-direction: row;
 }
 
 @media screen and (max-width: 1000px) {
@@ -137,8 +128,6 @@ main {
   text-align: start;
   width: 80%;
   padding-left: 2em;
-
-
 }
 
 .left-section button {
@@ -166,27 +155,6 @@ main {
   height: 400px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
-
-
 }
 
 /* Login */
-.left-section form input {
-  background: rgba(126, 209, 245, 0.11);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 30px;
-  padding: 0.8em;
-  width: 368px;
-  font-size: 1rem;
-  font-weight: 300;
-  font-family: var(--grey-shade);
-}
-
-.left-section form {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  align-items: center;
-  justify-content: center;
-
-}
