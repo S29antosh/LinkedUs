@@ -74,6 +74,21 @@ Header {
   justify-content: space-around;
   gap: 2em;
 }
+@media screen and (max-width: 1000px) {
+  .navbar {
+    flex-direction: column;
+    height: 30vh;
+  }
+  /* .nav-links {
+    flex-direction: column;
+    gap: 1em;
+  } */
+  .nav-links ul {
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+  
 
 /* main  */
 main {
