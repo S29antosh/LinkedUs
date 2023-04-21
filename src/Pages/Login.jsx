@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 // import { Link } from "react-router-dom";
 import "../CSS files/Login.css";
 
+
 // Stores the user data
 var User = {
   email: "",
@@ -39,8 +40,7 @@ export default function Login() {
             <div className="right-section">
               {/* random image from unsplash */}
               <img
-                src="https://source.unsplash.com/random/400x400"
-                alt="random image"
+                src="public\Images\Scene - 1.png" alt="random"
               />
             </div>
             <div className="left-section">
@@ -53,7 +53,7 @@ export default function Login() {
                   placeholder="Username"
                   value={email}
                   onChange={(e) => setemail(e.target.value)}
-                  required
+                  
                 />
 
                 <input
@@ -64,7 +64,7 @@ export default function Login() {
                   placeholder="Password"
                   value={password}
                   onChange={(e) => setpassword(e.target.value)}
-                  required
+                  
                 />
                 <div className="forget-password"><a href="/Forget">Forget Password</a> </div>
                 <button type="submit" onClick={NextPage}>

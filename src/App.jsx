@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import Register from "./Pages/Register";
 import Eroor from "./Pages/Eroor";
+import JobPosting from "./Pages/JobPosting";
 
 
 
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/Homepage" element={<HomePage />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
+          <Route path="/JobPosting" element={<JobPosting />} />
           <Route path="*" element={<Eroor />} />
           {/* <Route path="/Search" element={<Search />} /> */}
         </Routes>

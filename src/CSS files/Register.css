@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
 
 :root {
   background-color: rgba(242, 245, 245, 0.678);
@@ -40,7 +40,7 @@ form {
     font-family: var(--grey-shade);
   /* width: 250px; */
 }
-button {
+/* button {
 
     padding: 0.7em;
     border: none;
@@ -58,7 +58,9 @@ button {
  button:hover {
     background: #2f00ff;
     color: #ffffff;
-  }
+    cursor: pointer;
+    
+  } */
 @media(max-width: 768px) {
   .input {
     flex-direction: column;

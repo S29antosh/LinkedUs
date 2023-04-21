@@ -7,10 +7,16 @@
   box-sizing: border-box;
 }
 
+
 :root {
   --grey-shade: #A29C9C;
   --primary-color: #414141;
 
+}
+
+img {
+  width: 100%;
+  display: block;
 }
 
 body {
@@ -24,7 +30,7 @@ li {
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
   color: var(--grey-shade);
 }
@@ -39,6 +45,7 @@ img {
   margin: 0px auto;
   min-height: 100vh;
 }
+
 Header {
   padding: 1em;
 }
@@ -51,6 +58,7 @@ Header {
   align-self: center;
   align-items: center;
 }
+
 .logo {
   font-size: 1.1rem;
   font-family: cursive;
@@ -74,11 +82,13 @@ Header {
   justify-content: space-around;
   gap: 2em;
 }
+
 @media screen and (max-width: 1000px) {
   .navbar {
     flex-direction: column;
     height: 30vh;
   }
+
   /* .nav-links {
     flex-direction: column;
     gap: 1em;
@@ -88,7 +98,7 @@ Header {
     gap: 1em;
   }
 }
-  
+
 
 /* main  */
 main {
@@ -126,6 +136,7 @@ main {
 }
 
 .left-section h1 {
+  text-align: start;
   font-size: 2.5rem;
   font-weight: 600;
   width: 70%;
@@ -145,7 +156,7 @@ main {
   padding-left: 2em;
 }
 
-.left-section button {
+button {
 
   padding: 0.7em;
   border: none;
@@ -160,9 +171,10 @@ main {
   border-radius: 10px;
 }
 
-.left-section button:hover {
+button:hover {
   background: #2f00ff;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .right-section img {
@@ -170,7 +182,85 @@ main {
   /* height: 100%; */
 
 
- 
+
 }
 
-/* Login */
+/* Homepage */
+.grid-container {
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 1em;
+}
+
+.grid-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+
+
+}
+
+.grid-left p {
+  font-family: poppins;
+  max-width: 16ch;
+  font-size: 3.5rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+.grid-left p b{
+  color: #5956E9;
+}
+
+.grid-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.grid-right img {
+  width: 80%;
+
+  border-radius: 1em;
+  box-shadow: 7px 7px 8px  rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.grid-container form {
+
+  display: flex;
+  flex-direction: row;
+
+  gap: 1em;
+
+}
+
+.grid-container form input {
+  font-family: poppins;
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  background: rgba(255, 255, 255, 0.93);
+  border: 0px solid rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  padding: 0.5em;
+  width: 20em;
+}
+.grid-container form input:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-right img {
+    display: none;
+  }
+
+}
