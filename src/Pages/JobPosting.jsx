@@ -1,44 +1,51 @@
 import React from "react";
 import Navigation_Bar from "../Components/Navigation_Bar";
 import "../CSS files/JobPosting.css";
+import Axios from "axios";
 
 export default function JobPosting() {
-  const style = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "100vh",
-    flexDirection: "column",
+  const [title, setTitle] = React.useState("");
+  const [content, setContent] = React.useState("");
+
+  const postData = (e) => {
+    e.preventDefault();
+
+    Axios.post("http://localhost:5000/addJobs", {
+      title: title,
+      content: content,
+    }).then((response) => {
+      alert("Job Posted");
+    });
   };
-  const form_style = {
-    display: "grid",
-    gridTemplateColumns: "repeat(2, 1fr)",
-    gridGap: "1rem",
-    justifyContent: "center",
-    alignItems: "center",
-  };
+
   return (
     <div>
-      <Navigation_Bar />
-      <div style={style} className="Job-post">
-        <h1>Post A Job</h1>
-        <form style={form_style} action="none">
-          <input type="text" placeholder="Job Title" />
-          <input type="text" placeholder="Company Name" />
-          <input type="text" placeholder="Location" />
-          <input type="text" placeholder="Job Type" />
-          <div className="message">
-            <input type="text" placeholder="Skills Required" />
-            <input type="text" placeholder="Job Description" />
-          </div>
-          <input type="text" placeholder="Salary" />
-          <input type="text" placeholder="Experience" />
-          <input type="text" placeholder="Contact Number" />
-          <input type="text" placeholder="Email" />
-          <button type="submit">Post</button>
+      <Navigation_Bar name="Jobs" />
+
+      <h1 style={{ textAlign: "center" }}>Post a Job</h1>
+
+      <div className="job-posting-form">
+        <form>
+          <input
+            type="text"
+            placeholder="Job Title"
+            value={title}
+            onChange={(e) => {
+              setTitle(e.target.value);
+            }}
+          />
+
+          <input
+            type="description"
+            placeholder="Job Description"
+            value={content}
+            onChange={(e) => {
+              setContent(e.target.value);
+            }}
+          />
+          <button onClick={postData}>Create</button>
         </form>
       </div>
-      =
     </div>
   );
 }

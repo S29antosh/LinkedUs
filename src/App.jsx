@@ -6,6 +6,7 @@ import HomePage from "./Pages/HomePage";
 import Register from "./Pages/Register";
 import Eroor from "./Pages/Eroor";
 import JobPosting from "./Pages/JobPosting";
+import Jobs from "./Pages/Jobs";
 
 
 
@@ -19,7 +20,8 @@ export default function App() {
           <Route path="/Homepage" element={<HomePage />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
-          <Route path="/JobPosting" element={<JobPosting />} />
+          <Route path="/JobPosting/id:2" element={<JobPosting />} />
+          <Route path="/Jobs/" element={<Jobs />} />
           <Route path="*" element={<Eroor />} />
           {/* <Route path="/Search" element={<Search />} /> */}
         </Routes>
