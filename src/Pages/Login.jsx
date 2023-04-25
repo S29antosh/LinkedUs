@@ -69,7 +69,9 @@ export default function Login() {
                 </button>
               </form>
 
-              <p>
+              <p style={{
+                textAlign: "center",
+              }}>
                 New?{" "}
                 <Link
                   style={{
